@@ -2,7 +2,7 @@ package collection2;
 
  
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     
     
     private int empid;
@@ -122,7 +122,11 @@ public class Employee {
     	return this.deptno;
     }
     
-    
+    @Override
+    public int compareTo(Employee e)
+    {
+    	return this.empid-e.empid;
+    }
 
  
 
